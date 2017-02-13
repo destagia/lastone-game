@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import lastone
+
+player1 = lastone.Player('Taro')
+player2 = lastone.Player('Hanako')
+
+game = lastone.Game(player1, player2)
+
+game.run()
