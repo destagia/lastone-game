@@ -8,8 +8,11 @@ class Point:
     def __eq__(self, other):
         return isinstance(other, Point) and self.x == other.x and self.y == other.y
 
+    def __ne__(self, other):
+        return not __eq__(self, other)
+
     def __str__(self):
-        return "(" + str(self.__x) + ", " + str(self.__y) + ")"
+        return "p(" + str(self.__x) + ", " + str(self.__y) + ")"
 
     __repr__ = __str__
 

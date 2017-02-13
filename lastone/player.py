@@ -2,6 +2,8 @@ from lastone.move import Move
 from lastone.point import Point
 
 class Player(object):
+    debug_error = True
+
     def __init__(self, name):
         self.__name = name
 

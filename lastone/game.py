@@ -9,13 +9,15 @@ class Game(object):
     def run(self, board=Board()):
         try:
             for player in self.__turns():
+                print('Turn of {}'.format(player.name))
                 move = None
                 while move is None:
                     try:
                         move = player.select_move()
                         move.validate(board.asarray())
                     except Exception as e:
-                        print(e)
+                        if player.debug_error:
+                            print(e)
                         move = None
 
                 board.append_move(move)
